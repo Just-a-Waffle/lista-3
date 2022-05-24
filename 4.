@@ -1,0 +1,16 @@
+#!/bin/bash
+while [ "$act" != "x" ];do
+        echo 'meu Deus do ceu eu n tenho tempo pra nada..'
+        read act
+        if [ "$act" = "a" ];then
+                echo 'qual pasta?'
+                read pasta
+                ls -la $pasta | grep ^d
+        elif [ "$act" = "b" ];then
+                ls -la | grep x
+        elif [ "$act" = "c" ];then
+                ls -la | grep ^l
+        elif [ "$act" = "x" ];then
+                echo adios.
+        fi
+done
