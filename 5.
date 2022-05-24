@@ -1,0 +1,13 @@
+#!/bin/bash
+echo 'digite uma senha valida, contendo no minimo 5 caracteres, uma letra maiscula e um numero.'
+read -sp "senha: " pass
+if [[ "$pass" =~ ['0-9'] ]];then
+        if [[ "$pass" =~ ['A-Z'] ]];then
+                if [ $(($(echo "$pass" | wc -m))) -gt "4" ];then
+                        echo senha aceita.
+                        else senha nao aceita.
+                fi
+        else echo senha nao aceita.
+        fi
+else echo senha nao aceita
+fi
